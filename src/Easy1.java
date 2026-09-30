@@ -12,7 +12,7 @@ public class Easy1 implements ActionListener {
     private JTextArea ta; //typing area
     private int WIDTH=800;
     private int HEIGHT=700;
-    private JMenuItem Button1, Button2, Button3, Button4, Button5;
+
 
 
     public Easy1() {
@@ -27,15 +27,11 @@ public class Easy1 implements ActionListener {
     private void prepareGUI() {
         mainFrame = new JFrame("Java SWING Examples");
         mainFrame.setSize(WIDTH, HEIGHT);
-        mainFrame.setLayout(new GridLayout(2, 3));
+        mainFrame.setLayout(new GridLayout(3, 3));
 
         //menu at top
 
-        Button1 = new JMenuItem("Button1");
-        Button2 = new JMenuItem("Button2");
-        Button3 = new JMenuItem("Button3");
-        Button4 = new JMenuItem("Button4");
-        Button5 = new JMenuItem("Button5");
+
 
 
 
@@ -59,7 +55,6 @@ public class Easy1 implements ActionListener {
       //  controlPanel.setLayout(new BorderLayout()); //set the layout of the pannel
 
         //mainFrame.add(controlPanel);
-        mainFrame.add(statusLabel);
         mainFrame.setVisible(true);
     }
 
@@ -70,6 +65,12 @@ public class Easy1 implements ActionListener {
         JButton Button3 = new JButton("Button 3");
         JButton Button4 = new JButton("Button 4");
         JButton Button5 = new JButton("Button 5");
+        JButton Button6 = new JButton("Button 6");
+        JButton Button7 = new JButton("Button 7");
+        JButton Button8 = new JButton("Button 8");
+
+
+
 
 
 
@@ -78,6 +79,38 @@ public class Easy1 implements ActionListener {
         Button3.setActionCommand("Button 3");
         Button4.setActionCommand("Button 4");
         Button5.setActionCommand("Button 5");
+        Button6.setActionCommand("Button 6");
+        Button7.setActionCommand("Button 7");
+        Button8.setActionCommand("Button 8");
+
+
+        JPanel centerPanel = new JPanel();
+        centerPanel.setLayout(new BorderLayout());
+
+        JLabel centerLabel = new JLabel("label", JLabel.CENTER);
+        JButton Button9 = new JButton("button 9");
+        JButton Button10 = new JButton("button 10");
+
+        centerPanel.add(centerLabel, BorderLayout.WEST);
+        centerPanel.add(Button9, BorderLayout.EAST);
+        centerPanel.add(Button10, BorderLayout.SOUTH);
+
+        mainFrame.add(Button1);
+        mainFrame.add(Button2);
+        mainFrame.add(Button3);
+
+        mainFrame.add(Button4);
+        mainFrame.add(centerPanel);
+        mainFrame.add(Button5);
+
+        mainFrame.add(Button6);
+        mainFrame.add(Button7);
+        mainFrame.add(Button8);
+
+        mainFrame.setVisible(true);
+
+
+
 
 
 
@@ -89,11 +122,9 @@ public class Easy1 implements ActionListener {
 
 
 
-        mainFrame.add(Button1, BorderLayout.EAST);
-        mainFrame.add(Button2, BorderLayout.CENTER);
-       mainFrame.add(Button3, BorderLayout.NORTH);
-       mainFrame.add(Button4, BorderLayout.SOUTH);
-        mainFrame.add(Button5, BorderLayout.EAST);
+
+
+
 
 
 
